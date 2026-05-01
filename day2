@@ -73,8 +73,36 @@ int main(){
     int a,b;
     int max_number;
     cin >>a>>b;
-    //turnary operator
+    //ternary operator
     max_numer=(a>b) ? a:b; 
     cout << max_number;
     return 0;
 }
+
+
+
+
+
+//problem no. 5- continue statement 
+// print 1 to n and avoid those number which are divisible by 3
+#include <iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>> n;
+    
+    for (int i=1; i<=n; i++){
+        if(i% 3 ==0){
+            continue;
+        }
+        cout<< i<< " ";
+    }
+   cout << "\n";
+   return 0;
+}
+
+
+
+
+
+
