@@ -128,3 +128,31 @@ int main(){
 
 
 
+
+//problem no. 7- smart home lightening system 
+
+#include <iostream>
+using namespace std;
+int main(){
+    string dayOrNight;
+    bool motiondetected;
+    cout<<"is it day or night?:";
+    cin>>dayOrNight;
+    cout<< "is motion detected?(1 for yes, 0 for no):";
+    cin>> motiondetected;
+    
+    if (dayOrNight=="Night" || dayOrNight =="night"){
+        if(motiondetected){
+            cout<<"turn on the led light with 100% brightness..";
+        }else{
+            cout<<"turn on the led light with only 10% of brightness..";
+        }
+    }else{
+        cout<<"turn off the lights...";
+    }
+    return 0;
+    
+}
+ 
+
+
