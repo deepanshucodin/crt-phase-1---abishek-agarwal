@@ -68,3 +68,62 @@ int main(){
 
 
 
+//problem no. 5 --
+//print 1 to 10 using a do while loop
+#include<iostream>
+using namespace std;
+int main(){
+    int i = 1;
+    do{
+        cout <<i<<" ";
+        i++;
+        
+    }while(i<=10);
+    return 0;
+            
+ 
+}
+
+
+
+//problem no. 6--
+//print 10 to 1 using a do while loop
+#include<iostream>
+using namespace std;
+int main(){
+    int i = 10;
+    do{
+        cout <<i<<" ";
+        i--;
+        
+    }while(i>=1);
+    return 0;
+            
+ 
+}
+
+
+
+
+
+//problem no. 7--
+//factoriL OF A NO.
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int fact=1;
+for(int i=1;i<=n;i++){
+    fact=fact*i;
+    
+}
+cout<<fact;
+return 0;
+ 
+}
+
+
+
+
+
