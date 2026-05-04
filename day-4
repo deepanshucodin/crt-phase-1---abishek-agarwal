@@ -32,5 +32,30 @@ int main(){
         }
         cout<<" \n";
     }
+
+
+
+
+
+
+//problem 3
+//print 1 to 10 10 number of time 
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<< enter the number of rows u want to print;
+    cin>>n;
+    //number of times to print the pattern
+    for (int i=1; i<=n;i++){
+        //this defines what to print in the pattern
+        for(int j=1; j<=i ; j++){
+            cout<<"*"<<" ";
+            
+        }
+        cout<<" \n";
+    }
+    return 0;
+}
     return 0;
 }
