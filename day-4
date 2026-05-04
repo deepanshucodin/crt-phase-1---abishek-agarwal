@@ -39,7 +39,7 @@ int main(){
 
 
 //problem 3
-//print 1 to 10 10 number of time 
+// print a right angled triangle 
 #include<iostream>
 using namespace std;
 int main(){
@@ -56,4 +56,29 @@ int main(){
         cout<<" \n";
     }
     return 0;
+}
+
+
+
+
+
+
+//problem 4
+//print a mirror right angle triangle 
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout << "enter the number of rows u want to print:"<<" ";
+    cin>>n;
+    for(int i=1; i<=n;i++){
+        for(int j=n-i;j>=1;j--){
+            cout<<" ";
+            
+        }
+        for(int k=1;k<=i;k++){
+            cout<<"*";
+        }
+        cout<<"\n";
+    }
 }
