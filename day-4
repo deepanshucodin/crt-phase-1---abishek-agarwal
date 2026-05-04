@@ -44,7 +44,7 @@ int main(){
 using namespace std;
 int main(){
     int n;
-    cout<< enter the number of rows u want to print;
+    cout << "enter the number of rows u want to print:"<<" ";
     cin>>n;
     //number of times to print the pattern
     for (int i=1; i<=n;i++){
@@ -55,7 +55,5 @@ int main(){
         }
         cout<<" \n";
     }
-    return 0;
-}
     return 0;
 }
