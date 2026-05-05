@@ -1,1 +1,53 @@
+//problem -- 1 
+//opposit and tri
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout << "enter the number of rows u want to print:"<<" ";
+    cin>>n;
+    //number of times to print the pattern
+    for (int i=1; i<=n;i++){
+        //this defines what to print in the pattern
+        for(int j=1; j<=i ; j++){
+            cout<<"*";
+            
+        }
+        
+        cout<<" \n";
+    }
+        for(int k=n-1; k>=1 ; k--){
+            for(int l=1;l<=k;l++){
+            cout<<"*";
+            }
+            cout<<"\n";
+            
+        }
+        
+    return 0;
+}
+
+
+
+
+
+//problem -- 2
+//function declaration and initilization
+
+#include<iostream>
+using namespace std;
+void printmessage(){
+    cout<<"he we are learning functions....";
+}
+int main(){
+    printmessage();
+    return 0;
+}
+
+
+
+
+
+
 
