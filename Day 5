@@ -50,4 +50,27 @@ int main(){
 
 
 
+//problem -- 3
+//area
+
+#include<iostream>
+using namespace std;
+int area(int a, int b){
+    return a*b;
+}
+int main(){
+    int lenght=10;
+    int width = 5;
+    int areaofrectangle = area(lenght,width);
+    cout<<areaofrectangle;
+    return 0;
+}
+
+
+
+
+
+
+
+
 
