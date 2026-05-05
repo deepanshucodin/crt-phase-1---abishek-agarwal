@@ -1,0 +1,70 @@
+//problem -- 4
+//types of function// 4.1-- no arguments and no retrn type
+
+#include<iostream>
+using namespace std;
+void doorbell(){
+    cout<<" ting tong";
+    
+}
+int main(){
+    doorbell();
+    return 0;
+}
+
+
+
+
+
+
+//4.2 argument but no return type
+#include<iostream>
+using namespace std;
+void sendtext(string message){
+    cout<<message;
+}
+int main(){
+    sendtext("bjp wons");
+    return 0;
+}
+
+
+
+
+
+//4.3 no argument , but return type 
+#include<iostream>
+using namespace std;
+int ticketnumber(){
+    return 101;
+}
+int main(){
+    cout<<ticketnumber();
+    return 0;
+}
+
+
+
+
+
+//4.4  argument,return type
+#include<iostream>
+using namespace std;
+int currencyconversion(int amountinINR){
+    return amountinINR/100;
+}
+int main(){
+    cout<<currencyconversion(100);
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
