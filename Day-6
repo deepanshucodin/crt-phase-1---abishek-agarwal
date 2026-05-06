@@ -74,3 +74,23 @@ int main(){
 
 
 
+//problem --4
+//coffee price finding through function
+
+#include<iostream>
+using namespace std;
+
+int coffe(int a,int b=50){
+    return a*b;
+}
+
+
+
+int main(){
+    int a;
+    cout<<"no of coffies: ";
+    cin>>a;
+    cout<<"coffe bill: "<<coffe(a);
+    return 0;
+    
+}
