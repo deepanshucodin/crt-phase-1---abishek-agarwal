@@ -101,7 +101,7 @@ int main(){
 
 
 
-//problem --4
+//problem --5
 //samrt ac remote //function overloading
 
 #include<iostream>
@@ -146,4 +146,28 @@ int main(){
         break;}
     
    }
+}
+
+
+
+
+//practice problem --6 
+//classes&objects
+#include<iostream>
+using namespace std;
+
+class student{
+    public:
+    string name;
+    int age;
+    void introduce(){
+    cout<<"hi there, this person name is "<<name<<"and his age is "<<age<<"\n";
+    
+    }
+};
+int main (){
+    student s1;
+    s1.name="deepu";
+    s1.age=24;
+    s1.introduce();
 }
