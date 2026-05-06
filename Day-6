@@ -45,5 +45,32 @@ int main(){
 
 
 
+//problem --3
+//call by value and call by refrence
+//call by value -- Photocopy
+//call by refrence -- orgginal copy  (address)
+
+#include<iostream>
+using namespace std;
+void updatebyvalue (int a){
+    a=500;
+}
+void updatebyrefrence(int &a){
+    a=500;
+}
+
+int main(){
+    int original = 100;
+
+    updatebyvalue(original);
+    cout<<original<<"\n";
+    updatebyrefrence(original);
+    cout<<original;
+}
+
+
+
+
+
 
 
