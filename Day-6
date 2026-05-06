@@ -94,3 +94,56 @@ int main(){
     return 0;
     
 }
+
+
+
+
+
+
+
+//problem --4
+//samrt ac remote //function overloading
+
+#include<iostream>
+using namespace std;
+
+void settemprature(int temp=22){
+    cout<<"AC Turn ON: temrature set to "<<temp<<"°C"<<"\n";
+}
+
+void settemprature(double temp){
+    cout<<"temprature set to"<< temp <<"°C"<<"\n";
+}
+void settemprature(string mode){
+    
+    if(mode =="ECO" || "eco"){
+        cout<<"temprature set to 24 °C"<<"\n";
+    }else if(mode =="TURBO" || "turbo"){
+        cout<<"temprature set to 18°C"<<"\n";
+    }
+}
+
+int main(){
+
+  
+   
+   settemprature();//deeault value --22}
+   
+    int choice;
+   cin>>choice;
+   switch(choice){
+   case 1: {
+       int a;
+       cout<<"Set Temprature according to U:";
+       cin>>a;
+       settemprature(a);
+       break;
+   }//manually setting the settemprature
+    case 2:{ 
+        string b;
+        cin>>b;
+        settemprature(b);
+        break;}
+    
+   }
+}
