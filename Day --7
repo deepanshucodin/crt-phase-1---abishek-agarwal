@@ -1,6 +1,6 @@
 //problem --1
-//access identifier
-//7.2---public
+//access identifier or access specifier
+//7.2---private
 #include<iostream>
 using namespace std;
 class bankaccount{
@@ -22,3 +22,24 @@ int main(){
 
 
 
+//problem --2
+//access specifier
+//7.2---protected
+#include<iostream>
+using namespace std;
+
+class parent{
+    protected:
+    int secretcode = 1234;
+};
+class child: public parent{
+    public:
+    void accessofsecretcode(){
+        cout<<"Secret code of the locker is: "<<secretcode;
+    }
+};
+
+int main(){
+    child obj1;
+    obj1.accessofsecretcode();
+}
