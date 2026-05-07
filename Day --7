@@ -120,3 +120,49 @@ int main(){
   std1.displaydetails();
     
 }
+
+
+
+
+
+
+
+
+
+
+
+//problem--3
+//pillar of oops
+//encapsulation
+//encapsulation means we are binding the data into a single unit (functions,data,variables,methods)
+//into a single unit called class and making some restrictions on this class members
+//data security
+//controlled access over my data
+//validation before accerssing the data 
+//code maintability
+#include<iostream>
+using namespace std;
+class bankaccount{
+    private:
+    int balance;
+    public:
+    void setbalance(int amount){
+        if(amount>=0){
+            balance=amount;
+        }else{
+            cout<<"enter a valid number....";
+        }
+    }
+    
+    public:
+int getbalance(){
+    return balance;
+}    
+};
+
+int main(){
+    bankaccount obj1;
+    obj1.setbalance(5000);
+    cout<<obj1.getbalance();
+    
+}
