@@ -166,3 +166,20 @@ int main(){
     cout<<obj1.getbalance();
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//ABSTRACTIONS
+//hiding the immplementation and only showing the necessary input
+//features to the users
+//abstract class---class cannot be intialized and it is formed using the abstract keyword
+//abstract method -- there is no intialization and the abstract method
