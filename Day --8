@@ -75,6 +75,142 @@ int main(){
 
 
 
+// problem int16_t
+// inheritence
+// Types 1.3 heirarchical inheritence
 
+
+
+#include<iostream>
+using namespace std;
+class vehicle{
+    public:
+    void start(){
+        cout<<"vehicle starts"<<"\n";
+    }
+};
+
+class bike : public vehicle{
+    public:
+    void drive1(){
+        cout<<"bike is running"<<"\n";
+    }
+};
+
+class car : public vehicle{
+    public:
+    void drive(){
+        cout<<" car is running"<<"\n";
+    }
+};
+
+
+int main(){
+    car obj1;
+ 
+    obj1.drive();
+    obj1.start();
+    
+    bike obj2;
+    obj2.drive1();
+    obj2.start();
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+// problem int16_t
+// inheritence
+// Types 1.4 multiple inheritence
+
+
+
+#include<iostream>
+using namespace std;
+class parent1{
+    public:
+    void givememoney(){
+    cout<<"mummy paisa do mujhe"<<"\n";
+    }
+};
+class parent2{
+    public:
+    void givememoney1(){
+    cout<<"Papa paisa do mujhe"<<"\n";
+    }
+};
+
+class child : public parent1, public parent2{
+    public:
+    void money(){
+    cout<<"i got money"<<"\n";
+    }
+};
+
+int main(){
+    child obj1;
+    obj1.givememoney1();
+    obj1.givememoney();
+    obj1.money();
+   
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+// problem int16_t
+// inheritence
+// Types 1.5 Hybrid inheritence
+
+
+
+#include<iostream>
+using namespace std;
+
+class a {
+    public:
+    void print (){
+        cout<<"BJP wons";
+    }
+};
+
+class b :virtual public a{
+    
+};
+
+class c :virtual public a{
+    
+};
+class d : public b, public c{
+    
+};
+
+
+int main(){
+    d obj1;
+    obj1.print();
+
+}
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
 
 
