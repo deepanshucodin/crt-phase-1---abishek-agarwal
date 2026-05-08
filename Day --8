@@ -1,4 +1,4 @@
-// problem int16_t
+// problem 1
 // inheritence
 // Types 1.1 single inheritence
 
@@ -25,6 +25,53 @@ int main(){
     obj1.drive();
     obj1.start();
 }
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// problem 2
+// inheritence
+// Types 1.2 multilevel inheritence
+
+
+
+#include<iostream>
+using namespace std;
+class vehicle{
+    public:
+    void start(){
+        cout<<"vehicle starts"<<"\n";
+    }
+};
+
+class car : public vehicle{
+    public:
+    void drive(){
+        cout<<" car is running"<<"\n";
+    }
+};
+class speedometer : public car{
+    public:
+    void speed(){
+        cout<<"car is running at 60km/h"<<"\n";
+    }
+};
+
+int main(){
+    speedometer obj1;
+    obj1.speed();
+    obj1.drive();
+    obj1.start();
+}
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 
