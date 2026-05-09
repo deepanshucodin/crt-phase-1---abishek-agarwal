@@ -42,3 +42,74 @@ int main (){
     kitchenapp->work();
     
 }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//problem 2 
+//constructor overloading
+
+#include<iostream>
+using namespace std;
+
+class rectangle {
+    public:
+    int lenght ;
+    int width;
+    
+    rectangle(){
+        lenght =1;
+        width=1;
+        
+    }
+    rectangle(int side){
+        lenght=side;
+        width=side;
+        
+    }
+    rectangle(int side1, int side2){
+        lenght = side1;
+        width = side2;
+        
+        
+    }
+    void showarea(){
+        cout<<lenght*width<<"\n";
+    }
+};
+
+int main(){
+    rectangle r1;
+    rectangle r2(5);
+    rectangle r3(5,4);
+    
+    r1.showarea();
+    r2.showarea();
+    r3.showarea();
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+
+//problem 3
+//introducing array +traversal+memory layout
+
+#include<iostream>
+using namespace std;
+
+void traversal(int arr[],int size){
+    for(int i=0; i<size; i++){
+        cout<<arr[i]<<" ";
+    }
+};
+ 
+int main(){
+    int arr[]={10,20,30,40,50};
+    traversal(arr,5);
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////
