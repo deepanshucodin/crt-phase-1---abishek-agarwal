@@ -1,93 +1,233 @@
-//recursion prob 1
-
+Linear Search 
 #include <iostream>
-using namespace std;
+#include <vector>
 
-void printnumber (int n){
-    //base
-    if (n>10){
-        return ;
+int linearSearch(const std::vector<int>& arr, int target) {
+    for (int i = 0; i < arr.size(); ++i) {
+        if (arr[i] == target) {
+            return i;
+        }
     }
-    //logic
-    cout <<n<<" ";
-    printnumber(n+1);
+    return -1;
 }
 
-int main()
-{
-    printnumber(1);
+int main() {
+    std::vector<int> numbers = {10, 23, 45, 70, 11, 15};
+    int target = 70;
+    
+    int result = linearSearch(numbers, target);
+    
+    std::cout << result << "\n";
     
     return 0;
 }
 
-
-///////////////////////////////////////////////////////////
-
-
-
-
-
-//factorial
+Binary Search 
 #include <iostream>
-using namespace std;
+#include <vector>
 
-int factorial(int n){
-    //base condition
-    int count =0;
-    if (n==0||n==1){
+int binarySearch(const std::vector<int>& arr, int target) {
+    int left = 0;
+    int right = arr.size() - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid] == target) {
+            return mid;
+        }
+        if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return -1;
+}
+
+int main() {
+    std::vector<int> numbers = {10, 11, 15, 23, 45, 70};
+    int target = 70;
+    
+    int result = binarySearch(numbers, target);
+    
+    std::cout << result << "\n";
+    
+    return 0;
+}
+
+Bubble Sort
+#include <iostream>
+#include <vector>
+
+void bubbleSort(std::vector<int>& arr) {
+    int n = arr.size();
+    for (int i = 0; i < n - 1; ++i) {
+        for (int j = 0; j < n - i - 1; ++j) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    std::vector<int> numbers = {70, 45, 23, 15, 11, 10};
+    
+    bubbleSort(numbers);
+    
+    for (int i = 0; i < numbers.size(); ++i) {
+        std::cout << numbers[i] << " ";
+    }
+    std::cout << "\n";
+    
+    return 0;
+}
+
+selection sort
+#include <iostream>
+#include <vector>
+
+void selectionSort(std::vector<int>& arr) {
+    int n = arr.size();
+    for (int i = 0; i < n - 1; ++i) {
+        int minIndex = i;
+        for (int j = i + 1; j < n; ++j) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        if (minIndex != i) {
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+}
+
+int main() {
+    std::vector<int> numbers = {70, 45, 23, 15, 11, 10};
+    
+    selectionSort(numbers);
+    
+    for (int i = 0; i < numbers.size(); ++i) {
+        std::cout << numbers[i] << " ";
+    }
+    std::cout << "\n";
+    
+    return 0;
+}
+
+Insertion sort
+#include <iostream>
+#include <vector>
+
+void insertionSort(std::vector<int>& arr) {
+    int n = arr.size();
+    for (int i = 1; i < n; ++i) {
+        int key = arr[i];
+        int j = i - 1;
+
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+int main() {
+    std::vector<int> numbers = {70, 45, 23, 15, 11, 10};
+    
+    insertionSort(numbers);
+    
+    for (int i = 0; i < numbers.size(); ++i) {
+        std::cout << numbers[i] << " ";
+    }
+    std::cout << "\n";
+    
+    return 0;
+}
+
+Recursion 
+Print 1 to 10
+#include <iostream>
+
+void printNumbers(int n) {
+    if (n > 10) {
+        return;
+    }
+    std::cout << n << " ";
+    printNumbers(n + 1);
+}
+
+int main() {
+    printNumbers(1);
+    std::cout << "\n";
+    return 0;
+}
+
+Factorial Of a Number
+#include <iostream>
+
+int factorial(int n) {
+    if (n <= 1) {
         return 1;
     }
-    
-    
-    return n*factorial(n-1);
-    
+    return n * factorial(n - 1);
 }
 
-
-int main()
-{
-    cout<<factorial(4);
+int main() {
+    int number = 5;
+    
+    int result = factorial(number);
+    
+    std::cout << result << "\n";
     
     return 0;
 }
 
-
-
-///////////////////////////////////////////////////////////////////////////
-//recursion prob 3
-
-
-
-
-//factorial
+Fibonacci Series 
 #include <iostream>
-using namespace std;
 
-int fibonacci(int n){
-    //base condition
-    
-    if (n==0){
-        return 0;
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
     }
-    if(n==1){
-        return 1;
-    }
-    
-    
-    
-   return fibonacci(n-1)+fibonacci(n-2);
-   
-    
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-
-int main()
-{
-    int terms = 10;
-   cout << "Fibonacci Series: ";
-    for (int i = 0; i < terms; i++) {
-        cout << fibonacci(i) << " ";
+int main() {
+    int n = 10;
+    
+    for (int i = 0; i < n; ++i) {
+        std::cout << fibonacci(i) << " ";
     }
+    
+    std::cout << "\n";
     
     return 0;
 }
+
+LeetCode 70
+Climbing stairs 
+class Solution {
+private:
+    int recursive(int n, int curr) {
+        if (curr == n) {
+            return 1;
+        }
+        if (curr > n) {
+            return 0;
+        }
+
+        return recursive(n, curr + 1) + recursive(n, curr + 2);
+    }
+
+public:
+    int climbStairs(int n) {
+        return recursive(n, 0);
+    }
+};
